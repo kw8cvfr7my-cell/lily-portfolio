@@ -73,6 +73,8 @@ const themeNames = {
   },
 };
 
+    const languageKey = locale === "zh" ? "zh" : "en";
+    
 const name =
   index === 0
     ? themeNames[currentTheme]?.[locale] || defaultName
