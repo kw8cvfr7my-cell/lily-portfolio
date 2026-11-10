@@ -104,7 +104,7 @@ function mergeScenery(root) {
 }
 export function createIsland(
   container,
-  { onReady, onArrive, onLeave, onMove, onTheme, onBoundary } = {},
+  { onReady, onArrive, onLeave, onMove, onTheme, onBoundary, audio } = {},  //add "audio"
 ) {
   const renderer = new T.WebGLRenderer({
     antialias: true,
