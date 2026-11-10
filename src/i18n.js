@@ -154,15 +154,15 @@ export const COPY = {
 export const THEME_COPY = {
   forest: {
     en: { english: "FOREST ISLAND", caption: "Curiosity, made into a world." },
-    zh: { english: "FOREST ISLAND", caption: "把好奇心，走成一座岛。" },
+    zh: { english: "探索森林", caption: "把好奇心，走成一座岛。" },
   },
   desert: {
     en: { english: "SANDBAR", caption: "Find possibility in every new perspective." },
-    zh: { english: "SANDBAR", caption: "在每一种视角里，发现新的可能。" },
+    zh: { english: "探索沙洲", caption: "在每一种视角里，发现新的可能。" },
   },
   ocean: {
     en: { english: "SHALLOW SEA", caption: "Let ideas surface." },
-    zh: { english: "SHALLOW SEA", caption: "让灵感浮现。" },
+    zh: { english: "探索浅海", caption: "让灵感浮现。" },
   },
 };
 
