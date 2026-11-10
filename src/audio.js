@@ -197,7 +197,7 @@ export class ForestAudio {
     osc.type = "triangle";
     osc.frequency.setValueAtTime(base, t);
     osc.frequency.exponentialRampToValueAtTime(base * 0.55, t + 0.12);
-    gain.gain.setValueAtTime(0.1, t); // ← 音量：0.04 → 0.1
+    gain.gain.setValueAtTime(0.14, t); // ← 音量：0.04 → 0.1-----------------音量越大数值越高
     gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.14);
     osc.connect(gain);
     gain.connect(this.master);
@@ -214,7 +214,7 @@ export class ForestAudio {
     click.type = "sine";
     click.frequency.setValueAtTime(700 + Math.random() * 150, t);
     click.frequency.exponentialRampToValueAtTime(300, t + 0.04);
-    cg.gain.setValueAtTime(0.03, t);
+    cg.gain.setValueAtTime(0.015, t);///更闷就跳到 0.015
     cg.gain.exponentialRampToValueAtTime(0.0001, t + 0.05);
     click.connect(cg);
     cg.connect(this.master);
