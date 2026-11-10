@@ -56,17 +56,35 @@ function renderNavigation() {
 
   categories.forEach((category, index) => {
     //const name = text(category, "name");
-    const defaultName = text(category, "name");
-    const name =
-  index === 0 && locale === "zh"
-    ? ({
-        forest: "洞察森林",
-        desert: "探索沙洲",
-        ocean: "探索浅海",
-      }[currentTheme] || defaultName)
+   const defaultName = text(category, "name");
+
+const themeNames = {
+  forest: {
+    zh: "洞察森林",
+    en: "Inside Forest",
+  },
+  desert: {
+    zh: "探索沙洲",
+    en: "Inside Sandbar",
+  },
+  ocean: {
+    zh: "探索浅海",
+    en: "Inside Shallow Sea",
+  },
+};
+
+const name =
+  index === 0
+    ? themeNames[currentTheme]?.[locale] || defaultName
     : defaultName;
+
+const short =
+  index === 0
+    ? name
+    : text(category, "short");
+
+
     
-    const short = text(category, "short");
     const label = document.createElement("button");
     label.className = "camp-label";
     label.dataset.camp = index;
