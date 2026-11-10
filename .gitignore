@@ -1,0 +1,8 @@
+# Private working intake: retain locally for verification, never publish with the portfolio.
+portfolio-intake.md
+
+# Build and local environment output
+node_modules/
+dist/
+.DS_Store
+test-results/

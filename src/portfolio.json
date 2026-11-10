@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "profile": {
+    "name": "Lily Yang",
+    "title": "AI Explorer Island",
+    "titleZh": "AI 探索岛",
+    "subtitle": "AI Marketing Builder",
+    "intro": "Building AI-powered products through user insights and marketing strategy.",
+    "nameZh": "杨莉",
+    "subtitleZh": "AI Marketing Builder · AI 营销产品构建者",
+    "introZh": "通过用户洞察与营销策略，构建 AI 驱动的产品。",
+    "transition": "Moving from Marketing and Operations toward AI Product Building.",
+    "transitionZh": "从市场营销与运营走向 AI 产品构建。",
+    "education": [
+      {
+        "degree": "BSc Human Resource Management",
+        "institution": "Zhejiang University of Water Resources and Electric Power",
+        "period": "2022–2026",
+        "degreeZh": "人力资源管理学士",
+        "institutionZh": "浙江水利水电学院",
+        "periodZh": "2022–2026"
+      },
+      {
+        "degree": "MSc International Marketing Management",
+        "institution": "University of Leeds",
+        "period": "2026–2027 · In progress",
+        "degreeZh": "国际市场营销管理硕士",
+        "institutionZh": "利兹大学",
+        "periodZh": "2026–2027 · 在读"
+      }
+    ],
+    "capabilities": [
+      {
+        "name": "User Research",
+        "nameZh": "用户研究"
+      },
+      {
+        "name": "Product Thinking",
+        "nameZh": "产品思维"
+      },
+      {
+        "name": "Growth Marketing",
+        "nameZh": "增长营销"
+      },
+      {
+        "name": "AI Product Operations",
+        "nameZh": "AI 产品运营"
+      },
+      {
+        "name": "Data Analysis",
+        "nameZh": "数据分析"
+      }
+    ],
+    "links": [
+      {
+        "label": "View GitHub repository",
+        "labelZh": "查看 GitHub 仓库",
+        "url": "https://github.com/yllld8848Lilyang/lily-portfolio"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "id": "insight-forest",
+      "name": "Insight Forest",
+      "nameZh": "洞察森林",
+      "short": "INSIGHT",
+      "shortZh": "用户洞察",
+      "english": "USER RESEARCH",
+      "englishZh": "用户研究",
+      "intro": "How I turn user needs into clearer product opportunities.",
+      "introZh": "看我如何把用户需求转化为清晰的产品机会。",
+      "description": "A Small-U case from my AI product operations experience at Joy Media. The story follows problem discovery, feedback analysis, and product improvement support.",
+      "descriptionZh": "基于我在无忧传媒参与小U AI 产品运营的经历，展示问题发现、反馈分析与产品优化支持。",
+      "kind": "research",
+      "metrics": [
+        {
+          "value": "50+",
+          "label": "user needs collected",
+          "labelZh": "条需求收集"
+        },
+        {
+          "value": "7",
+          "label": "optimization directions",
+          "labelZh": "个优化方向"
+        }
+      ],
+      "items": [
+        {
+          "title": "From User Needs to Product Directions",
+          "titleZh": "从用户需求到产品优化方向",
+          "summary": "A structured story of how user needs were collected, patterns were identified, and findings supported Small-U improvements.",
+          "summaryZh": "梳理需求收集、规律识别与支持小U优化的过程。",
+          "kicker": "JOY MEDIA · AI PRODUCT OPERATIONS",
+          "kickerZh": "无忧传媒 · AI 产品运营",
+          "chapters": [
+            {
+              "title": "Discover the workflow needs",
+              "titleZh": "发现真实工作需求",
+              "text": "Worked with directors and designers to understand needs around script writing, adapting successful short-video formats, and poster design.",
+              "textZh": "对接编导与设计人员，了解脚本撰写、短视频内容复用和海报设计中的实际需求。"
+            },
+            {
+              "title": "Synthesize feedback",
+              "titleZh": "整理并分析反馈",
+              "text": "Collected more than 50 needs through questionnaires and one-to-one conversations, then organized feedback into recurring product opportunities.",
+              "textZh": "通过问卷与一对一沟通收集 50+ 条需求，并将反馈整理为重复出现的产品机会。"
+            },
+            {
+              "title": "Support product improvement",
+              "titleZh": "支持产品优化",
+              "text": "Identified seven optimization directions, including script-structure guidance and creator-persona tags, and supported the team’s work to improve Small-U.",
+              "textZh": "总结出 7 个优化方向，包括脚本结构建议与达人标签，并支持团队优化小U。"
+            }
+          ],
+          "reflection": "The next step is to connect each recommendation to its evidence, implementation status, and measured outcome.",
+          "reflectionZh": "下一步将把每条建议与对应证据、落地状态和效果口径关联起来。",
+          "sourceNote": "Counts are from Lily’s supplied summary and CV. The underlying Feishu table is not linked or reproduced here.",
+          "sourceNoteZh": "数据来自杨莉提供的汇总与简历；页面不链接或复现底层飞书表格。"
+        }
+      ]
+    },
+    {
+      "id": "ai-projects",
+      "name": "AI Projects",
+      "nameZh": "AI 项目",
+      "short": "AI BUILDS",
+      "shortZh": "AI 构建",
+      "english": "PRODUCT STORIES",
+      "englishZh": "产品故事",
+      "intro": "Three product stories, with each project’s current stage made clear.",
+      "introZh": "三个产品故事，清楚标注每个项目目前所处的阶段。",
+      "description": "Explore one prototype and two concepts at the intersection of AI, product thinking, gaming, and marketing.",
+      "descriptionZh": "探索 AI、产品思维、游戏与营销交汇处的一个原型和两个概念项目。",
+      "kind": "projects",
+      "items": [
+        {
+          "title": "Small-U Feedback Assistant",
+          "titleZh": "小U反馈分析助手",
+          "summary": "A prototype project exploring how product teams can turn scattered feedback into traceable insights and reviewable recommendations.",
+          "summaryZh": "探索如何帮助产品团队把分散反馈转化为可追溯的洞察与可审核的建议。",
+          "kicker": "PROTOTYPE · INDEPENDENT BUILD",
+          "kickerZh": "原型 · 独立构建",
+          "chapters": [
+            {
+              "title": "Why build it",
+              "titleZh": "为什么做",
+              "text": "Feedback can be spread across conversations and documents. The project explores a clearer way to connect each product opportunity with its source evidence.",
+              "textZh": "反馈可能分散在不同沟通与文档中。项目探索如何把产品机会与来源证据更清楚地关联起来。"
+            },
+            {
+              "title": "Who it is for",
+              "titleZh": "为谁解决问题",
+              "text": "Product and operations teammates who need to review user feedback, understand recurring pain points, and prepare evidence-led iteration proposals.",
+              "textZh": "面向需要审阅用户反馈、理解重复痛点并准备证据支持的迭代建议的产品与运营同学。"
+            },
+            {
+              "title": "Prototype direction and roadmap",
+              "titleZh": "原型方向与路线图",
+              "text": "The intended workflow is to organize de-identified feedback, group recurring themes, retain traceable evidence, and draft suggestions for human review. These describe the project direction; specific prototype behavior is not claimed here. Next: evaluate evidence traceability, recommendation usefulness, and handling of uncertain input.",
+              "textZh": "预期流程是整理脱敏反馈、归纳重复主题、保留可追溯证据，并生成由人工审核的建议草稿。这些描述的是项目方向，不代表此处已声明的原型功能。下一步评估证据可追溯性、建议可用性和不确定输入的处理。"
+            }
+          ],
+          "reflection": "The prototype must distinguish evidence from interpretation and make uncertainty visible. Real work data is only used within its approved scope.",
+          "reflectionZh": "原型需要区分证据与推断，并明确呈现不确定性。真实业务数据仅在获准范围内使用。",
+          "sourceNote": "Prototype stage as confirmed by Lily; exact demonstrable features remain to be documented.",
+          "sourceNoteZh": "阶段由杨莉确认为原型；可实际演示的具体功能仍待补充。"
+        },
+        {
+          "title": "GameLingo AI",
+          "titleZh": "GameLingo AI",
+          "summary": "A Player Insight Engine concept for finding player pain points in Steam reviews and Reddit discussions.",
+          "summaryZh": "玩家洞察引擎概念，旨在从 Steam 评论和 Reddit 讨论中发现玩家痛点。",
+          "kicker": "CONCEPT · PLAYER INSIGHT ENGINE",
+          "kickerZh": "概念 · 玩家洞察引擎",
+          "chapters": [
+            {
+              "title": "The opportunity",
+              "titleZh": "产品机会",
+              "text": "Game communities create large volumes of discussion. GameLingo AI explores how those conversations might become clearer player insight for teams.",
+              "textZh": "游戏社区持续产生大量讨论。GameLingo AI 探索如何将这些讨论转化为团队更易理解的玩家洞察。"
+            },
+            {
+              "title": "The product direction",
+              "titleZh": "产品方向",
+              "text": "Analyze Steam reviews and Reddit discussions to surface recurring player pain points. The target workflow and analysis method still need validation.",
+              "textZh": "分析 Steam 评论与 Reddit 讨论，发现重复出现的玩家痛点。目标工作流与分析方法仍需验证。"
+            },
+            {
+              "title": "What comes next",
+              "titleZh": "下一步探索",
+              "text": "Define the target user, select a permitted sample, and test whether the resulting themes are specific and useful. This remains a concept, not a deployed tool.",
+              "textZh": "明确目标用户、选择获准使用的样本，并验证归纳出的主题是否具体且有用。当前仍是概念，不是已上线工具。"
+            }
+          ],
+          "sourceNote": "This current direction differs from the supplied draft PRD, which describes a localization checker.",
+          "sourceNoteZh": "当前方向与所提供的旧版 PRD 不同；旧版文档描述的是本地化检查工具。"
+        },
+        {
+          "title": "Inspiration AI",
+          "titleZh": "Inspiration AI",
+          "summary": "An AI Marketing Strategy Generator concept that turns a brand, audience, and goal into a structured campaign starting point.",
+          "summaryZh": "AI 营销策略生成器概念，将品牌、受众与目标转化为结构化的营销方案起点。",
+          "kicker": "CONCEPT · AI MARKETING STRATEGY",
+          "kickerZh": "概念 · AI 营销策略",
+          "chapters": [
+            {
+              "title": "The brief",
+              "titleZh": "输入简报",
+              "text": "A marketer provides the brand, intended audience, and campaign goal.",
+              "textZh": "营销人员提供品牌、目标受众与营销目标。"
+            },
+            {
+              "title": "The strategy draft",
+              "titleZh": "策略草案",
+              "text": "The concept proposes a campaign idea, growth strategy, and content plan for the brief.",
+              "textZh": "根据简报生成活动创意、增长策略与内容计划。"
+            },
+            {
+              "title": "The product question",
+              "titleZh": "需要验证的问题",
+              "text": "The next step is to test whether the output is specific, on-brand, and useful enough for a marketer to refine. This remains a concept until a prototype is confirmed.",
+              "textZh": "下一步验证输出是否具体、符合品牌并足以供营销人员继续完善。确认原型前，本项目仍是概念。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "career-harbor",
+      "name": "Career Harbor",
+      "nameZh": "职业港湾",
+      "short": "CAREER",
+      "shortZh": "职业经历",
+      "english": "SELECTED EXPERIENCE",
+      "englishZh": "精选经历",
+      "intro": "Three roles, presented through the capabilities they developed.",
+      "introZh": "三段经历，围绕所展现的能力展开。",
+      "description": "A concise view of product operations, user research, data analysis, optimization, and growth activity across three organizations.",
+      "descriptionZh": "简要呈现三段经历中的产品运营、用户研究、数据分析、优化与增长活动能力。",
+      "kind": "gallery",
+      "timeline": [
+        {
+          "period": "Mar–Sep 2025",
+          "title": "Joy Media · AI Product Operations Intern",
+          "titleZh": "无忧传媒 · AI 产品运营实习生",
+          "text": "User needs, feature testing, product documentation, and feedback analysis.",
+          "textZh": "用户需求、功能测试、产品文档与反馈分析。"
+        },
+        {
+          "period": "Sep–Dec 2025",
+          "title": "ZEEKR · User & Event Operations Intern",
+          "titleZh": "极氪 · 用户与活动运营实习生",
+          "text": "User and event operations, campaign coordination, and product optimization support.",
+          "textZh": "用户与活动运营、营销活动协同及产品优化支持。"
+        },
+        {
+          "period": "Dec 2025–May 2026",
+          "title": "DiDi · Product & User Operations Intern",
+          "titleZh": "滴滴 · 产品与用户运营实习生",
+          "text": "User operations, recommendation strategy support, product iteration, and SQL-based analysis.",
+          "textZh": "用户运营、推荐策略支持、产品迭代与 SQL 数据分析。"
+        }
+      ],
+      "items": [
+        {
+          "title": "Joy Media / 无忧传媒",
+          "summary": "AI Product Operations Intern · Mar–Sep 2025. User research, requirement synthesis, feature testing, and product documentation for Small-U.",
+          "summaryZh": "AI 产品运营实习生 · 2025 年 3–9 月。参与小U用户研究、需求整理、功能测试与产品文档。",
+          "kicker": "AI PRODUCT OPERATIONS · USER RESEARCH",
+          "kickerZh": "AI 产品运营 · 用户研究"
+        },
+        {
+          "title": "ZEEKR / 极氪",
+          "summary": "User & Event Operations Intern · Sep–Dec 2025. SQL, product optimization, and growth activities.",
+          "summaryZh": "用户与活动运营实习生 · 2025 年 9–12 月。SQL、产品优化与增长活动。",
+          "kicker": "SQL · PRODUCT OPTIMIZATION · GROWTH",
+          "kickerZh": "SQL · 产品优化 · 增长活动"
+        },
+        {
+          "title": "DiDi / 滴滴",
+          "summary": "Product & User Operations Intern · Dec 2025–May 2026. User operations, product operations, and data-informed iteration.",
+          "summaryZh": "产品与用户运营实习生 · 2025 年 12 月–2026 年 5 月。用户运营、产品运营与数据驱动迭代。",
+          "kicker": "USER OPERATIONS · PRODUCT OPERATIONS",
+          "kickerZh": "用户运营 · 产品运营"
+        }
+      ]
+    }
+  ]
+}

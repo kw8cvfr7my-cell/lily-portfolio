@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="theme-color" content="#d5eef0" />
+    <meta name="description" content="AI Explorer Island — Lily Yang, AI Marketing Builder." />
+    <title>AI Explorer Island · Lily Yang</title>
+  </head>
+  <body data-theme="forest">
+    <main id="app">
+      <div id="world" aria-label="AI Explorer Island 3D environment"></div>
+      <div class="edge-light" aria-hidden="true"></div>
+      <div id="loading" role="status">
+        <div class="loading-island">✳</div>
+        <p data-copy="loading">Arriving at the island…</p>
+        <span>A LITTLE WORLD, A LOT TO DISCOVER.</span>
+      </div>
+      <header class="topbar">
+        <button id="home" class="brand" aria-label="Show home introduction">
+          <span class="brand-mark">t<span>·</span></span>
+          <span class="brand-copy"><span id="brand-title">AI Explorer Island</span><small id="brand-subtitle">AI MARKETING BUILDER</small></span>
+        </button>
+        <div class="top-controls">
+          <button id="language-toggle" class="language-button" type="button" aria-label="Switch to Chinese">中文</button>
+          <div class="theme-picker" role="group" aria-label="Island theme" data-aria="themeGroup">
+            <button data-theme="forest" aria-pressed="true"><span>♧</span><b data-copy="forest">Forest</b></button>
+            <button data-theme="desert" aria-pressed="false"><span>☼</span><b data-copy="sandbar">Sandbar</b></button>
+            <button data-theme="ocean" aria-pressed="false"><span>≈</span><b data-copy="shallowSea">Shallow Sea</b></button>
+          </div>
+          <button id="sound" class="round-button" aria-label="Turn ambient sound on" aria-pressed="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M10 5 5 9H2v6h3l5 4V5Z" /><path id="sound-waves" d="m16 9 5 6m0-6-5 6" />
+            </svg>
+          </button>
+          <button id="help" class="round-button" aria-label="Open the field guide" data-aria="openHelp">?</button>
+        </div>
+      </header>
+      <section id="welcome" class="welcome" aria-labelledby="welcome-name">
+        <p class="eyebrow"><span></span><b data-copy="eyebrow">AI PRODUCT · MARKETING · OPERATIONS</b></p>
+        <h1><span data-copy="welcomePrefix">Hi, I’m</span><br /><span id="welcome-name">Lily Yang</span></h1>
+        <p id="welcome-role" class="welcome-role">AI Marketing Builder</p>
+        <p id="welcome-story" class="welcome-story"></p>
+        <p id="welcome-transition" class="welcome-transition"></p>
+        <div id="profile-capabilities" class="profile-capabilities" aria-label="Core capabilities"></div>
+        <div id="education-strip" class="education-strip" aria-label="Education"></div>
+        <nav id="welcome-nav" class="welcome-nav" aria-label="Explore portfolio areas"></nav>
+        <button id="explore" class="primary-button"><span data-copy="explore">Explore the island</span><span>↗</span></button>
+        <button id="channel" class="channel-link" hidden><span data-copy="contact">Contact Lily</span><span>↗</span></button>
+        <p class="welcome-note" data-copy="movementHint">Use WASD or the arrow keys to move</p>
+      </section>
+      <div id="camp-labels" aria-label="Island destinations"></div>
+      <aside id="work" class="work-panel" aria-label="Portfolio details" hidden>
+        <button id="close-work" class="close-button" aria-label="Close details">×</button>
+        <div class="panel-scene">
+          <span id="panel-number"></span>
+          <svg id="panel-art" viewBox="0 0 240 120" fill="none" aria-hidden="true">
+            <ellipse cx="125" cy="102" rx="79" ry="9" fill="currentColor" opacity=".08" />
+            <path d="M45 100 116 24l75 76H45Z" stroke="currentColor" stroke-width="1.4" />
+            <path d="m116 24-3 76m0-48-30 48m30-48 28 48M45 100l-15 8m161-8 15 8" stroke="currentColor" stroke-width="1.4" />
+            <circle cx="189" cy="31" r="12" stroke="currentColor" />
+            <path d="M201 31h9m-21-21V3m-20 28h-8m28 21v9" stroke="currentColor" />
+            <path d="m39 63 4-6 4 6m-4-6v17m151 8 3-5 3 5m-3-5v12" stroke="currentColor" />
+          </svg>
+          <p id="panel-english"></p>
+        </div>
+        <div class="panel-body">
+          <p class="eyebrow" id="panel-category"></p>
+          <h2 id="work-title"></h2>
+          <p id="work-intro" class="work-intro"></p>
+          <p id="work-description"></p>
+          <div id="work-sections"></div>
+          <button id="continue" class="continue-button"><span data-copy="continue">Continue exploring</span><span>→</span></button>
+        </div>
+      </aside>
+      <dialog id="evidence-dialog" aria-label="Full-size image">
+        <button id="close-evidence" aria-label="Close image">×</button><img alt="" /><p></p>
+      </dialog>
+      <aside class="island-tools">
+        <button id="overview" class="overview-button">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="12" r="8" /><path d="M4 12h16M12 4c5 4 5 12 0 16-5-4-5-12 0-16Z" />
+          </svg>
+          <span data-copy="overview">Island overview</span><span>↗</span>
+        </button>
+        <div class="minimap" aria-label="Island map" data-aria="map">
+          <span class="map-north">N</span>
+          <div class="map-island"><span class="map-lake"></span><div id="map-sites"></div><span id="map-player" aria-label="Your location" data-aria="yourLocation"></span></div>
+          <span class="map-caption"><i></i><span data-copy="youAreHere">You are here</span></span>
+        </div>
+        <div class="compass" aria-hidden="true"><span id="compass-needle">↑</span><span>N</span></div>
+      </aside>
+      <footer class="bottom-bar">
+        <div class="world-caption"><span id="theme-english">FOREST ISLAND</span><p id="theme-caption"></p></div>
+        <nav id="category-nav" class="category-nav" aria-label="Portfolio navigation" data-aria="portfolioNavigation"></nav>
+        <div class="discovery"><span id="visited-count">00</span><span>/ <b id="camp-total">03</b><small data-copy="areasExplored">areas explored</small></span></div>
+      </footer>
+      <div id="walk-status" class="walk-status" role="status" data-copy="walkStatus">Click the ground to explore</div>
+      <div class="touch-pad" aria-label="Movement controls" data-aria="movementControls">
+        <button data-dir="0,-1" aria-label="Move forward" data-aria="moveForward">↑</button>
+        <button data-dir="-1,0" aria-label="Move left" data-aria="moveLeft">←</button><span>✦</span>
+        <button data-dir="1,0" aria-label="Move right" data-aria="moveRight">→</button>
+        <button data-dir="0,1" aria-label="Move backward" data-aria="moveBackward">↓</button>
+      </div>
+      <div id="toast" role="status" hidden></div>
+      <dialog id="help-dialog">
+        <button id="close-help" class="close-button" aria-label="Close field guide" data-aria="closeHelp">×</button>
+        <p class="eyebrow">A FIELD GUIDE</p>
+        <h2 data-copy="helpTitle">Island field guide</h2>
+        <p class="help-intro" data-copy="helpIntro">There is no set route. Find a destination to open a story.</p>
+        <dl>
+          <div><dt data-copy="lookAround">Look around</dt><dd data-copy="lookAroundText">Drag with a mouse or one finger to rotate the view.</dd></div>
+          <div><dt data-copy="moveCloser">Move closer</dt><dd data-copy="moveCloserText">Use the scroll wheel or pinch to zoom.</dd></div>
+          <div><dt data-copy="walk">Walk</dt><dd data-copy="walkText">Click the ground, use WASD or arrow keys, or hold a direction button on mobile.</dd></div>
+          <div><dt data-copy="findStories">Open a story</dt><dd data-copy="findStoriesText">Walk into a glowing marker, or select a destination from the menu or map.</dd></div>
+          <div><dt data-copy="changeTheme">Change the scenery</dt><dd data-copy="changeThemeText">Switch between forest, sandbar, and shallow-sea themes.</dd></div>
+        </dl>
+        <p class="help-foot" data-copy="helpFoot">The lake and shoreline guide movement. Press Esc to close a panel.</p>
+        <button id="help-done" class="primary-button"><span data-copy="gotIt">Got it</span><span>↗</span></button>
+      </dialog>
+      <div id="fallback" hidden>
+        <h2 data-copy="webglTitle">The island scene needs WebGL</h2>
+        <p data-copy="webglText">You can still read each area from the navigation. Use a WebGL-enabled browser for free roaming.</p>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
