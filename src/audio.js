@@ -1,4 +1,5 @@
 // Original synthesized ambience. No recording or external music is copied.
+//已全部更新
 const midi = (n) => 440 * 2 ** ((n - 69) / 12);
 
 // 每个主题：根音、速度、五声音阶、4 小节和弦进行
@@ -183,26 +184,45 @@ export class ForestAudio {
     }
   }
 
-  // 柔和的脚步声（略带随机音高，避免机械重复）
+    // 柔和的脚步声（略带随机音高，避免机械重复）
   step() {
     if (!this.enabled || !this.context || !this.master) return;
     const c = this.context,
       t = c.currentTime;
+
+    // 主体：低频"咚"
     const osc = c.createOscillator(),
       gain = c.createGain();
-    const base = 135 + Math.random() * 25;
+    const base = 150 + Math.random() * 30;
     osc.type = "triangle";
     osc.frequency.setValueAtTime(base, t);
-    osc.frequency.exponentialRampToValueAtTime(base * 0.58, t + 0.12);
-    gain.gain.setValueAtTime(0.04, t);
-    gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.13);
+    osc.frequency.exponentialRampToValueAtTime(base * 0.55, t + 0.12);
+    gain.gain.setValueAtTime(0.1, t); // ← 音量：0.04 → 0.1
+    gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.14);
     osc.connect(gain);
     gain.connect(this.master);
     osc.start(t);
-    osc.stop(t + 0.14);
+    osc.stop(t + 0.15);
     osc.onended = () => {
       osc.disconnect();
       gain.disconnect();
+    };
+
+    // 点缀：很短的高频"嗒"，让小喇叭/手机也听得清
+    const click = c.createOscillator(),
+      cg = c.createGain();
+    click.type = "sine";
+    click.frequency.setValueAtTime(700 + Math.random() * 150, t);
+    click.frequency.exponentialRampToValueAtTime(300, t + 0.04);
+    cg.gain.setValueAtTime(0.03, t);
+    cg.gain.exponentialRampToValueAtTime(0.0001, t + 0.05);
+    click.connect(cg);
+    cg.connect(this.master);
+    click.start(t);
+    click.stop(t + 0.06);
+    click.onended = () => {
+      click.disconnect();
+      cg.disconnect();
     };
   }
 
