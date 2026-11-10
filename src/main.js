@@ -55,7 +55,16 @@ function renderNavigation() {
   for (const element of [campLabels, categoryNav, mapSites, welcomeNav]) element.replaceChildren();
 
   categories.forEach((category, index) => {
-    const name = text(category, "name");
+    //const name = text(category, "name");
+    const defaultName = text(category, "name");
+    const name =
+  index === 0 && locale === "zh"
+    ? ({
+        forest: "洞察森林",
+        desert: "探索沙洲",
+        ocean: "探索浅海",
+      }[currentTheme] || defaultName)
+    : defaultName;
     const short = text(category, "short");
     const label = document.createElement("button");
     label.className = "camp-label";
@@ -122,6 +131,7 @@ function applyLocale() {
   document.querySelector('meta[name="description"]').content = text(profile, "intro");
   $("theme-english").textContent = THEME_COPY[currentTheme][locale].english;
   $("theme-caption").textContent = THEME_COPY[currentTheme][locale].caption;
+  renderNavigation();
   renderProfile();
   renderNavigation();
   if (active >= 0) {
