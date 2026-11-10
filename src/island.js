@@ -104,7 +104,7 @@ function mergeScenery(root) {
 }
 export function createIsland(
   container,
-  { onReady, onArrive, onLeave, onMove, onTheme, onBoundary, audio } = {},  //add "audio"
+  { onReady, onArrive, onLeave, onMove, onTheme, onBoundary, audio } = {},
 ) {
   const renderer = new T.WebGLRenderer({
     antialias: true,
@@ -545,6 +545,7 @@ export function createIsland(
     moveSpeed = 0,
     targetYaw = 0.25,
     walkTime = 0,
+    lastStepAt = 0, // ← 新增：脚步声计时
     frame = 0,
     lastTime = performance.now(),
     isOverview = false,
@@ -605,6 +606,7 @@ export function createIsland(
     const destination = categories[index].arrival;
     if (portalAt(playerPosition, [categories[index]]) === 0) {
       near = index;
+      audio?.arrival(index); // ← 新增（可选）：已在目的地时也响提示音
       onArrive?.(index);
       return;
     }
@@ -717,6 +719,7 @@ export function createIsland(
   function setTheme(id) {
     if (!themes[id]) return;
     theme = id;
+    audio?.setTheme(id); // ← 新增：音乐跟随主题切换
     for (const [k, v] of Object.entries(biomes)) v.visible = k === id;
     landMat.color.set(palette[id].ground);
     sandMat.color.set(palette[id].sand);
@@ -852,6 +855,11 @@ export function createIsland(
       targetYaw = Math.atan2(vx, vz);
       playerPosition = next;
       walkTime += dt;
+      if (walkTime - lastStepAt > 0.36) {
+        // ← 新增：约每 0.36 秒一步脚步声
+        lastStepAt = walkTime;
+        audio?.step();
+      }
     }
     moveSpeed = T.MathUtils.lerp(
       moveSpeed,
@@ -881,6 +889,7 @@ export function createIsland(
       near = nextNear;
       container.dataset.near = String(near);
       if (near >= 0) {
+        audio?.arrival(near); // ← 新增：到达地点提示音
         onArrive?.(near);
       } else onLeave?.();
     }
