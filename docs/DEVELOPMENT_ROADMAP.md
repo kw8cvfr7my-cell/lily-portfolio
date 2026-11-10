@@ -27,4 +27,4 @@
 
 ## Current status
 
-The MVP site has been generated from the confirmed content plan. Automated checks, the GitHub Pages static build, and desktop/narrow-screen browser review pass. Repository publication is blocked because the connected GitHub integration is read-only (`push: false`). Public deployment will be verified separately after write access is available and the Pages workflow succeeds.
+The MVP site has been generated from the confirmed content plan, committed to `main`, and published on GitHub Pages. Automated tests, the GitHub Pages static build, the deployment workflow, and the live site were verified. The live address is https://yllld8848lilyang.github.io/lily-portfolio/.

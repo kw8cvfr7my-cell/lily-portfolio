@@ -7,8 +7,9 @@ lily-portfolio
 An interactive, recruiter-first portfolio presenting Lily Yang as an **AI Marketing Builder**. It connects verified experience with clearly labelled projects in progress and future ideas.
 
 **Owner:** Lily Yang (杨莉)  
-**Status:** MVP implemented locally; GitHub Pages publication pending  
-**Deployment target:** [GitHub Pages](https://github.com/yllld8848Lilyang/lily-portfolio)
+**Status:** MVP published on GitHub Pages  
+**Live site:** [AI Explorer Island](https://yllld8848lilyang.github.io/lily-portfolio/)  
+**Repository:** [yllld8848Lilyang/lily-portfolio](https://github.com/yllld8848Lilyang/lily-portfolio)
 
 ## Project direction
 
@@ -44,4 +45,4 @@ The interactive island interface is based on [island-portfolio](https://github.c
 
 ## Publish with GitHub Pages
 
-The workflow in `.github/workflows/deploy.yml` builds the static site and deploys `dist/` from the `main` branch. In repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. The build uses the `/lily-portfolio/` project-site path.
+The workflow in `.github/workflows/deploy.yml` builds and deploys `dist/` from the `main` branch. GitHub Pages is configured to use **GitHub Actions**. The build uses the `/lily-portfolio/` project-site path.

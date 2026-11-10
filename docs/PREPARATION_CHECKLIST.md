@@ -22,9 +22,6 @@
 - [x] Generate into a new directory; preserve the source Skill and all existing work.
 - [x] Install dependencies and run the documented tests and static build.
 - [x] Check GitHub Pages base path and deployment workflow.
+- [x] Publish from `main` with GitHub Actions and verify the live site.
 - [x] Confirm no private contact details, raw internal data, demo biographies, fake links, or placeholder claims remain in the published site content.
-- [x] Keep status as locally implemented; call it deployed only after public verification.
-
-## Publication blocker
-
-The connected GitHub integration currently has read-only access to `yllld8848Lilyang/lily-portfolio` (`push: false`). The complete site and GitHub Pages workflow are ready locally, but the repository cannot be updated or deployment verified until the GitHub connection has write access.
+- [x] Keep status as deployed only after public verification.

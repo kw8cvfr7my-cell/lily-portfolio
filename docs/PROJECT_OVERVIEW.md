@@ -28,4 +28,4 @@ The Small-U Feedback Assistant is currently labelled **Prototype** based on Lily
 
 ## Status
 
-**MVP implemented locally; GitHub Pages publication pending.** The design, content structure, bilingual interface, and static build are in place. Project stage, evidence, and publication permissions remain clearly separated so concepts are not presented as finished products.
+**MVP published on GitHub Pages.** The design, content structure, bilingual interface, static build, and public deployment are in place. Project stage and evidence remain clearly separated so concepts are not presented as finished products.
