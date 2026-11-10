@@ -61,6 +61,89 @@ export class ForestAudio {
       g.disconnect();
     };
   }
+
+
+
+  
+
+// Soft footsteps for the healing-game atmosphere.
+  step() {
+    if (!this.enabled || !this.context || !this.master) return;
+
+    const c = this.context;
+    const t = c.currentTime;
+    const osc = c.createOscillator();
+    const gain = c.createGain();
+
+    osc.type = "triangle";
+    osc.frequency.setValueAtTime(145, t);
+    osc.frequency.exponentialRampToValueAtTime(85, t + 0.12);
+
+    gain.gain.setValueAtTime(0.045, t);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.13);
+
+    osc.connect(gain);
+    gain.connect(this.master);
+
+    osc.start(t);
+    osc.stop(t + 0.14);
+
+    osc.onended = () => {
+      osc.disconnect();
+      gain.disconnect();
+    };
+  }
+
+  // A gentle chime when reaching a destination.
+  arrival(index = 0) {
+    if (!this.enabled || !this.context || !this.master) return;
+
+    const notes = [
+      [659.25, 783.99],
+      [587.33, 698.46],
+      [523.25, 659.25],
+    ];
+
+    const melody = notes[index % notes.length];
+    const c = this.context;
+
+    melody.forEach((frequency, i) => {
+      const t = c.currentTime + i * 0.16;
+      const osc = c.createOscillator();
+      const gain = c.createGain();
+
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(frequency, t);
+
+      gain.gain.setValueAtTime(0, t);
+      gain.gain.linearRampToValueAtTime(0.075, t + 0.025);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.65);
+
+      osc.connect(gain);
+      gain.connect(this.master);
+
+      osc.start(t);
+      osc.stop(t + 0.7);
+
+      osc.onended = () => {
+        osc.disconnect();
+        gain.disconnect();
+      };
+    });
+  }
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
   stop() {
     if (!this.context) return;
     this.enabled = false;
