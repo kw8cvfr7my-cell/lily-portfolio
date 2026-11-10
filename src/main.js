@@ -65,6 +65,7 @@ function renderNavigation() {
         ocean: "探索浅海",
       }[currentTheme] || defaultName)
     : defaultName;
+    
     const short = text(category, "short");
     const label = document.createElement("button");
     label.className = "camp-label";
@@ -131,7 +132,7 @@ function applyLocale() {
   document.querySelector('meta[name="description"]').content = text(profile, "intro");
   $("theme-english").textContent = THEME_COPY[currentTheme][locale].english;
   $("theme-caption").textContent = THEME_COPY[currentTheme][locale].caption;
-  renderNavigation();
+//  renderNavigation();
   renderProfile();
   renderNavigation();
   if (active >= 0) {
