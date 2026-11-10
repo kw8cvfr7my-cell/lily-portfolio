@@ -260,6 +260,8 @@ document.querySelectorAll(".theme-picker button").forEach((button) =>
     document.querySelectorAll(".theme-picker button").forEach((entry) => entry.setAttribute("aria-pressed", String(entry === button)));
     $("theme-english").textContent = THEME_COPY[id][locale].english;
     $("theme-caption").textContent = THEME_COPY[id][locale].caption;
+   // renderNavigation();
+    renderNavigation();
     const art = $("panel-art");
     const drawings = {
       forest: '<path d="m38 98 74-75 76 75H38Zm74-75v75m0-47-30 47m30-47 28 47M27 99h178"/><circle cx="184" cy="30" r="12"/>',
